@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&family=Dancing+Script&display=swap');
+
+/* ------- GENERAL STYLES ------- */
+:root {
+  --primary-color: #2f2e2e;
+  --secondary-color: #c5c7d5;
+  --third-color: #3ba7ff;
+
+  --main-typo: 'Barlow', sans-serif;
+  --second-typo: 'Dancing Script', cursive;
+
+  --typography-h1: 6rem;
+  --typography-h2: 2.6rem;
+  --typography-h3: 1.6rem;
+  --typography-h4: 0.8rem;
+
+  --gradient: linear-gradient(
+    90deg,
+    rgba(121, 114, 9, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  grid-area: header;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 5rem;
+  padding: 2rem 5% 0 5%;
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: var(--third-color);
+  font-family: var(--main-typo);
+  font-size: var(--typography-h1);
+}
+
+h2 {
+  font-family: var(--main-typo);
+  font-size: var(--typography-h2);
+}
+
+h3 {
+  font-family: var(--main-typo);
+  font-size: var(--typography-h3);
+  padding-bottom: 1rem;
+}
+
+footer {
+  width: 100%;
+  height: 450px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* ------- NAVEGATION BAR ------- */
+
+.main-nav {
+  display: none;
+  font-family: var(--main-typo);
+  background-color: var(--primary-color);
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+}
+
+.main-nav a {
+  color: var(--secondary-color);
+}
+
+.main-nav a:hover {
+  color: var(--third-color);
+  font-weight: bold;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 5px auto;
+}
+
+.separator {
+  display: inline-block;
+  background-color: beige;
+  height: 0.05rem;
+  width: 50%;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 30px;
+  right: 10%;
+  cursor: pointer;
+}
+
+#chkToggle {
+  display: none;
+}
+
+#chkToggle:checked + ul.main-nav {
+  display: block;
+}
+
+.menu-movil {
+  width: 30px;
+  height: 30px;
+}
+
+/* ------- MAIN ------- */
+/* ---- Section 1 ---- */
+
+.background-1 {
+  height: 1000px;
+  width: 100%;
+  background-image: url(./public/src/images/backgrounds/background-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  margin-top: 10rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-photo-logo {
+  font-size: 4rem;
+  color: var(--third-color);
+  font-family: var(--second-typo);
+}
+
+.icons-header {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ------ Section 2 ------- */
+
+.courses-container {
+  width: 100%;
+  height: auto;
+  background-image: url(./public/src/images/backgrounds/texture.jpg);
+  text-align: center;
+  font-size: var(--typography-h2);
+  padding-top: 5rem;
+  color: var(--secondary-color);
+  font-family: var(--main-typo);
+  font-size: 1.9rem;
+}
+
+.title-sec-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.courses {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 0 0 4rem 0;
+}
+
+.courses-card {
+  height: 540px;
+  width: 350px;
+  font-family: var(--main-typo);
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-family: var(--main-typo);
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0.4rem 0;
+}
+
+.card-text {
+  padding-bottom: 1.5rem;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  padding: 0.3rem;
+  background: var(--gradient);
+}
+
+.button-card {
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 1.2rem 1.7rem;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  color: var(--secondary-color);
+}
+
+.button-card:hover {
+  background-color: var(--third-color);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.title-sec-2 > h3 {
+  color: var(--secondary-color);
+}
+
+.courses-card a {
+  color: var(--secondary-color);
+}
+
+/* ------ Section 3 ------- */
+
+.title-sec-3 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 0 1.5rem 2rem 1.5rem;
+}
+
+.products-container {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product {
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.product:hover {
+  box-shadow: 0px 0px 10px #3ba7ff;
+}
+
+.title-sec-3 > h2 {
+  color: var(--primary-color);
+}
+
+.title-sec-3 > h3 {
+  color: var(--primary-color);
+}
+
+.product-desc {
+  font-family: var(--main-typo);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.product-price {
+  font-family: var(--main-typo);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.product a {
+  color: var(--primary-color);
+}
+
+/* ------ Section 4 ------- */
+
+.second-img-bg {
+  height: 650px;
+  width: 100%;
+  background-image: url(./public/src/images/backgrounds/background-2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* ------ Section 5 ------- */
+
+.about-us-seccion {
+  width: 100%;
+  height: auto;
+  padding: 2.5rem 0;
+  background-image: url(./public/src/images/backgrounds/texture-2.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-us {
+  background-color: white;
+  height: auto;
+  width: 300px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-us-text {
+  font-family: var(--main-typo);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ------ FOOTER ------- */
+
+.icons-footer {
+  height: 100px;
+  width: 80%;
+  border-bottom: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.info-footer {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  padding-top: 2rem;
+}
+
+.text-footer-1 {
+  width: 50%;
+  height: 200px;
+  border-right: 1px solid var(--secondary-color);
+  font-family: var(--main-typo);
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.text-footer-2 {
+  width: 50%;
+  height: 200px;
+  font-family: var(--main-typo);
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.list-title {
+  font-family: var(--main-typo);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.text-footer-1 a,
+.text-footer-2 a {
+  color: var(--secondary-color);
+}
+
+.text-footer-1 a:hover,
+.text-footer-2 a:hover {
+  color: var(--third-color);
+}
+
+/* =================================================
+                   MEDIA QUERIES
+ ================================================= */
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .courses-container {
+    padding: 3rem 1rem;
+  }
+
+  .about-us {
+    height: auto;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+  }
+
+  #chkToggle:checked + ul.main-nav {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .about-us-seccion {
+    height: 800px;
+  }
+
+  .about-us {
+    height: 500px;
+    width: 600px;
+  }
+
+  .icons-footer {
+    gap: 5rem;
+  }
+}
